@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="../static/css/success.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/success.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div class="topdiv">
+    <a class="title">文档管理系统</a>
+    <div class="titleTwo">
+        <a class="font" th:text="${userid}">用户名称</a>
+        <a class="font" href="jumpChangepassword">修改密码</a>
+        <a class="font" href="logout">注销登录</a>
+    </div>
+</div>
+<br>
+<div class="funcbut">
+    <div>
+        <a class="btn" href="/edit2">在线编辑word</a>
+        <a class="btn" href="fileUp">上传</a>
+    </div>
+</div>
+<br>
+<div class="outframe">
+    <iframe class="frame" src="gettree"></iframe>
+
+
+
+</div>
+</body>
+
+</html>

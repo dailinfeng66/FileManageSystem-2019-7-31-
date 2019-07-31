@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="static/js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/jquery-1.9.0.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="../static/css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/icon.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/demo.css">
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.easyui.min.js"></script>
+
+
+<!--    <link rel="stylesheet" type="text/css" href="static/css/easyui.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="static/css/icon.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="static/css/demo.css">-->
+<!--    <script type="text/javascript" src="static/js/jquery.min.js"></script>-->
+<!--    <script type="text/javascript" src="static/js/jquery.easyui.min.js"></script>-->
+</head>
+<body style="background-color: lightslategray;">
+<div style="margin-left: 40%;margin-top: 15%;">
+
+
+    <div style="margin:20px 0;"></div>
+    <div class="easyui-panel" title="Upload File" style="width:400px;padding:30px 70px 50px 70px ">
+        <div style="margin-bottom:20px">
+            <div>公共文件:</div>
+<!--            <input class="easyui-filebox"  data-options="prompt:'选择公共文件'" style="width:100%">-->
+            <input    type="file" name="file" style="width:100%" id="file_upload">
+        </div>
+        <div>
+            <input id="pubbtn" type="button" onclick="UploadFileExcel()" value="上传公共文件">
+        </div>
+        <div style="margin-bottom:20px">
+            <div>个人文件</div>
+            <input type="file" name="file" id="file_uploadprivate">
+        </div>
+        <div>
+            <input id="pribtn" type="button" onclick="UploadFileExcelPrivate()" value="上传个人文件">
+        </div>
+    </div>
+</div>
+
+
+<!--<input  type="file" name="file" id="file_upload">-->
+<!--<input id="pubbtn" type="button" onclick="UploadFileExcel()" value="上传公共文件">-->
+
+<!--<hr>-->
+<!--<input type="file" name="file" id="file_uploadprivate">-->
+<!--<input id="pribtn" type="button" onclick="UploadFileExcelPrivate()" value="上传个人文件">-->
+<script>
+
+
+    $('#pubbtn').hide();
+    $('#pribtn').hide();
+
+
+    $('#file_upload').change(function () {
+        $('#pubbtn').show();
+    });
+    $('#file_uploadprivate').change(function () {
+        $('#pribtn').show();
+    });
+
+
+    //
+    //     $('#file_upload').change(function () {
+    //         var file = $("#file_upload")[0].files[0];  //获取文件对象
+    //         var name = file.name;
+    //         $.ajax({
+    //             url: 'judgePubfileExist',
+    //             type: 'POST',
+    //             dataType : "JSON",
+    //
+    //             success: function (data) {
+    //                 console.log(data);
+    //                 if (data==true){
+    //                     $('#pubbtn').show();
+    //                 } else {
+    //                     alert("已经有相同名字的文件!请重命名");
+    //                 }
+    //
+    //             },
+    //             error: function (data) {
+    //                 console.log(data);
+    //                 alert("系统发生错误!")
+    //             },
+    //
+    //             data: {
+    //                 filename: name
+    //             }
+    //         });
+    //     });
+    //
+    //
+    // $('#file_uploadprivate').change(function () {
+    //     var file = $("#file_uploadprivate")[0].files[0];  //获取文件对象
+    //     var name = file.name;
+    //     $.ajax({
+    //         url: 'judgePrivateExist',
+    //         type: 'POST',
+    //         dataType : "JSON",
+    //
+    //         success: function (data) {
+    //             console.log(data);
+    //             if (data==true){
+    //                 $('#pribtn').show();
+    //             } else {
+    //                 alert("已经有相同名字的文件!请重命名");
+    //                 window.location.href = 'success';
+    //             }
+    //
+    //         },
+    //         error: function (data) {
+    //             console.log(data);
+    //             alert("系统发生错误!")
+    //         },
+    //
+    //         data: {
+    //             filename: name
+    //         }
+    //     });
+    // });
+
+    function UploadFileExcel() {
+        var file = $("#file_upload")[0].files[0];  //获取文件对象
+        var form = new FormData();
+        form.append("file", file);
+        $.ajax({
+            url: "uploadPublic",
+            type: "POST",
+            contentType: "multipart/form-data",
+            data: form,
+            async: false, //异步
+            processData: false, //很重要，告诉jquery不要对form进行处理
+            contentType: false, //很重要，指定为false才能形成正确的Content-Type
+            success: function (res) {
+                console.log(res);
+                confirm1(res);
+
+            },
+            error: function () {
+                confirm1("网络连接错误,稍后再试");
+            }
+        });
+    }
+
+
+    function UploadFileExcelPrivate() {
+        var file = $("#file_uploadprivate")[0].files[0];  //获取文件对象
+        var form = new FormData();
+        form.append("file", file);
+        $.ajax({
+            url: "uploadPrivate",
+            type: "POST",
+            contentType: "multipart/form-data",
+            data: form,
+            async: false, //异步
+            processData: false, //很重要，告诉jquery不要对form进行处理
+            contentType: false, //很重要，指定为false才能形成正确的Content-Type
+            success: function (res) {
+                console.log(res);
+                confirm1(res);
+
+            },
+            error: function () {
+                confirm1("系统错误!稍后再试")
+            }
+        });
+    }
+
+
+    function confirm1(mess) {
+        $.messager.confirm('文件上传', mess, function (r) {
+            window.location.href = 'success';
+        });
+    }
+</script>
+</body>
+</html>

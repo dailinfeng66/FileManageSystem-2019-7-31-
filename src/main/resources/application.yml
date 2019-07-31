@@ -1,0 +1,33 @@
+server:
+  port: 9696
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///summer?serverTimezone=UTC
+    username: root
+    password: 123123
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML5
+    servlet:
+      content-type: text/html
+  mvc:
+    static-path-pattern: /static/**
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+qqMail: 2441086385@qq.com
+stmtcode: nkswmtchdsiodhjb
+templateCode: SMS_171192934
+accessKeyid: LTAITIspsJRTR2ha
+secret: 9w9FhFAS7JXN6jKMPlTYDkx1qT79EZ
+

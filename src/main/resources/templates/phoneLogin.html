@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>文档管理系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="../static/js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="../static/images/login.js"></script>
+    <link href="../static/css/login2.css" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="static/js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="static/images/login.js"></script>
+    <link href="static/css/login2.css" rel="stylesheet" type="text/css"/>
+
+
+
+    <!--    -->
+
+
+    <link rel="stylesheet" type="text/css" href="static/css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="static/css/icon.css">
+    <link rel="stylesheet" type="text/css" href="static/css/demo.css">
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery.easyui.min.js"></script>
+
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/core.js"></script>
+    <style>
+        .input{
+            margin-left: 25px;
+        }
+        .on {
+            background-color: #eee;
+            color: #ccc;
+            cursor: not-allowed;
+        }
+
+
+    </style>
+</head>
+<body>
+<h1>文档管理系统<sup>2019</sup></h1>
+<div class="login" style="margin-top:50px;">
+
+    <div class="header">
+        <div class="switch" id="switch"><a class="switch_btn_focus" id="switch_qlogin" href="javascript:void(0);"
+                                           tabindex="7">快速登录</a>
+<!--            <a class="switch_btn" id="switch_login" href="javascript:void(0);" tabindex="8">快速注册</a>-->
+            <div class="switch_bottom" id="switch_bottom" style="position: absolute; width: 64px; left: 0px;"></div>
+        </div>
+    </div>
+
+
+    <div class="web_qr_login" id="web_qr_login" style="display: block; width:300px;height: 300px;">
+
+        <!--登录-->
+        <div class="web_login" id="web_login" style="width: 300px;" >
+
+
+            <div class="login-box">
+
+
+                <div class="login_form" >
+                    <!--                    <form action="" name="loginform" accept-charset="utf-8" id="login_form" class="loginForm" method="post">-->
+                    <input type="hidden" name="did" value="0"/>
+                    <input type="hidden" name="to" value="log"/>
+
+                    <div class="uinArea" id="uinArea">
+
+                        <label class="input-tips" for="phonenumber">帐号：</label>
+                        <div class="inputOuter" id="uArea">
+
+                            <input type="text" id="phonenumber" placeholder="电话号码" name="username" class="inputstyle input"/>
+                        </div>
+                    </div>
+                    <div class="uinArea" id="yzmarea">
+<!--                        <span style="display: flex">-->
+
+
+<!--                        <label class="input-tips" ><span style="display:flex; font-size: 15px;" >验证码:</span></label>-->
+<!--                        <div    class="inputOuter" id="yzmdiv">-->
+
+<!--                            <input type="text" id="yzm" maxlength="4" value="" name="username" class="inputstyle input " style="width: 60px;"/>-->
+                            <input type="button" style="width: 90%; height: 30px;margin-left: 30%" id="phonebtn" value="获取邮箱登录密匙">
+                            <br>    <br>
+                            <a href="index" style="margin-left: 50%;">账号密码登录</a>
+<!--                            <br>-->
+<!--                        </div>-->
+
+
+<!--                        </span>-->
+
+
+                    </div>
+
+
+
+                    <div style="padding-left:50px;margin-top:20px;">
+                        <input type="button" value="登 录" style="width:150px;" id="login_button_phone" class="button_blue"/></div>
+                    <!--                    </form>-->
+                </div>
+
+            </div>
+
+        </div>
+        <!--登录end-->
+    </div>
+
+
+
+    <!--注册end-->
+</div>
+<script type="text/javascript" src="../static/js/loginlogic.js"></script>
+<script type="text/javascript" src="static/js/loginlogic.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/core.js"></script>
+
+</body>
+</html>

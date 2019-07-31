@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "text": "文档",
+    "children": [
+      {
+        "id": 2,
+        "text": "工作文档",
+        "children": [
+          {
+            "id": 23,
+            "text": "点击这个",
+            "iconCls": "add",
+            "cuser": "张喜",
+            "ctime": "2019年7月18日",
+            "utime": "null",
+            "luser": "侯嘉",
+            "handle": "<a href=\"http://www.baidu.com\">重命名</a>"
+          }
+        ,
+          {
+            "id": 23,
+            "text": "点击这个",
+            "iconCls": "add",
+            "cuser": "张喜",
+            "ctime": "2019年7月18日",
+            "utime": "null",
+            "luser": "侯嘉",
+            "handle": "<a href=\"http://www.baidu.com\">重命名</a>"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "个人文档",
+        "children": [
+          {
+            "id": 23,
+            "text": "点击这个",
+            "iconCls": "add",
+            "cuser": "张喜",
+            "ctime": "2019年7月18日",
+            "utime": "null",
+            "luser": "侯嘉",
+            "handle": "<a href=\"http://www.baidu.com\">重命名</a>"
+          },
+          {
+            "id": 23,
+            "text": "点击这个",
+            "iconCls": "add",
+            "cuser": "张喜",
+            "ctime": "2019年7月18日",
+            "utime": "null",
+            "luser": "侯嘉",
+            "handle": "<a href=\"http://www.baidu.com\">重命名</a>"
+          }
+        ]
+      }
+    ]
+  }
+]
+
+

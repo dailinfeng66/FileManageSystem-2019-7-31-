@@ -1,0 +1,50 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    /*overflow-y: hidden;*/
+}
+.topdiv{
+    /*width: 100%;*/
+    height: 7%;
+    background-color: blue;
+}
+.title{
+    height: 100%;
+    /*width: 30%;*/
+    margin-left: 1%;
+    /*line-height: 100%;*/
+    color: white;
+    font-size: 150%;
+    position: relative; /*脱离文档流*/
+    top: 30%; /*偏移*/
+    line-height: normal;
+}
+.titleTwo{
+
+    position: relative; /*脱离文档流*/
+    top: 1%; /*偏移*/
+    margin-left: 85%;
+}
+.font{
+    color: aliceblue;
+}
+.funcbut{
+    width: 90%;
+    height: 5%;
+    margin-left: 80%;
+}
+.btn{
+    background-color: blue;
+    color: aliceblue;
+    width: 5%;
+    margin: 0;
+}
+.outframe{
+    width: 100%;
+    height: 85%;
+}
+.frame{
+    width: 99%;
+    height: 95%;
+}
